@@ -1,0 +1,8 @@
+{
+  "productName": "electron应用",
+  "files": ["./main.js", "./dist"],
+  "extraFiles": ["./videos", "./cvideo"], 
+  "directories": {
+    "output": "./buileder"
+  }
+}
