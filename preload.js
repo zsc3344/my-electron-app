@@ -1,6 +1,10 @@
-import { ipcRenderer } from 'electron'
-window.ipcRenderer = ipcRenderer
+const { contextBridge, ipcRenderer } = require('electron')
 
-window.addEventListener("DOMContentLoaded", () => {
-  console.log(' Hello Electron');
-});
+window.ipcRenderer = {
+  send: (channel, data) => {
+    ipcRenderer.send(channel, data)
+  },
+  on: (channel, callback) => {
+    ipcRenderer.on(channel, (event, ...args) => callback(...args))
+  },
+}
