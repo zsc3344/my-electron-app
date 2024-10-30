@@ -11,7 +11,7 @@ import home from './views/home/index.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <home />
+  <router-view></router-view>
 </template>
 
 <style scoped>

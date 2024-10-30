@@ -28,7 +28,7 @@ function createWindow() {
     mainWindow.webContents.openDevTools({ mode: "detach" });
   }
   ipcMain.on("open-new-window", (event, arg) => {
-    console.log("===111===");
+    console.log("===111 arg===", arg);
     const win2 = new BrowserWindow({
       width: 600,
       height: 400,

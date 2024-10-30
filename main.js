@@ -44,7 +44,7 @@ function createWindow() {
   // 监听从渲染进程发来的消息
   ipcMain.on('open-new-window', (event, arg) => {
     // 创建一个新的浏览器窗口
-    console.log('===111===')
+    console.log('===111 arg===', arg)
     const win2 = new BrowserWindow({
       width: 600,
       height: 400,

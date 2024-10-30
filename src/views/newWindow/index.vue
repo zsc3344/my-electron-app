@@ -1,13 +1,15 @@
 <template>
   <div>
     <h1>渲染进程</h1>
+    <span>{{ msg }}</span>
   </div>
 </template>
 
 <script>
-export default {
+import { defineProps }  from 'vue'
 
-}
+const msg = defineProps (['arg'])
+
 </script>
 
 <style>
